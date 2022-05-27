@@ -41,7 +41,7 @@ const Main: FC<MainProps> = ({ account }) => {
   return (
     <Flex
       w="full"
-      h="100vh"
+      h="20vh"
       justifyContent="center"
       alignItems="center"
       direction="column"
@@ -50,12 +50,20 @@ const Main: FC<MainProps> = ({ account }) => {
         {newAnimalType ? (
           <AnimalCard animalType={newAnimalType} />
         ) : (
-          <Text>Let's mint Animal Card!!!</Text>
+          <Text>Upload your Image!</Text>
         )}
       </Box>
-      <Button mt={4} size="sm" colorScheme="blue" onClick={onClickMint}>
-        Mint
-      </Button>
+      <Flex  w="full"h="25vh" justifyContent="center" alignItems="center" direction="column">
+      </Flex>
+      <Flex  w="full" h="70vh"justifyContent="space-around" alignItems="space-around" direction="row">
+        <Button onClick={onClickMint}>Mint1</Button>
+        <Button onClick={onClickMint}>Mint2</Button>
+        <Button onClick={onClickMint}>Mint3</Button>
+      </Flex>
+      <Flex  w="60vh" h="50vh"justifyContent="space-around" alignItems="space-around" direction="row">
+        <Button onClick={onClickMint}>Mint4</Button>
+        <Button onClick={onClickMint}>Mint5</Button>
+      </Flex>
     </Flex>
   );
 };
